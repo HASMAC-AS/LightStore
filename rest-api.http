@@ -1,9 +1,9 @@
-GET http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING
+GET http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING
 Accept: application/json
 
 ###
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=set
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=set
 Content-Type: application/json
 
 {"key": "test", "value": [1,2,{"message": "hello"}]}
@@ -11,40 +11,40 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=set
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=set
 Content-Type: application/json
 
 {"key": "list", "value": []}
 
 ###
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=unset
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=unset
 Content-Type: application/json
 
-{"key": "list"}
+{"key": "test"}
 
 ###
 
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=add
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=add
 Content-Type: application/json
 
-{"key": "list", "value": {"message": "yay7"}}
+{"key": "list", "value": {"message": "Hello World!"}}
 
 ###
 
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=update
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=update
 Content-Type: application/json
 
-{"key": "list", "id":9, "value": {"message": "yay9"}}
+{"key": "list", "id":5, "value": {"message": "Hello World!", "melding": "Hei på verden!"}}
 
 ###
 
 
-POST http://localhost:8883/api.php?auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=delete
+POST http://localhost:8883/api.php?version=0&auth=CHANGE_THIS_TO_A_RANDOM_STRING&action=delete
 Content-Type: application/json
 
-{"key": "list", "id":32}
+{"key": "list", "id":5}
 
 ###

@@ -208,7 +208,7 @@ try {
                     unset($db['data'][$data['key']]);
 
                 } elseif ($_GET['action'] === 'add') {
-                    $data['value']['ref'] = $data['value']['id'] ;
+                    $data['value']['ref'] = $data['value']['id'] ?? null ;
                     $data['value']['id'] = $db['version'];
                     $data['value']['created'] =  date("c");
                     $data['value']['lastModified'] =  date("c");
